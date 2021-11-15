@@ -1,0 +1,140 @@
+{
+    "data": [
+        {
+            "id" : 3,
+            "code" : "AM",
+            "name" : "Amazonas"
+        },
+        {
+            "id" : 4,
+            "code" : "BA",
+            "name" : "Bahía"
+        },
+        {
+            "id" : 5,
+            "code" : "CE",
+            "name" : "Ceará"
+        },
+        {
+            "id" : 8,
+            "code" : "GO",
+            "name" : "Goiás"
+        },
+        {
+            "id" : 10,
+            "code" : "MT",
+            "name" : "Mato Grosso"
+        },
+        {
+            "id" : 11,
+            "code" : "MS",
+            "name" : "Mato Grosso do Sul"
+        },
+        {
+            "id" : 12,
+            "code" : "MG",
+            "name" : "Minas Gerais"
+        },
+        {
+            "id" : 15,
+            "code" : "PR",
+            "name" : "Paraná"
+        },
+        {
+            "id" : 16,
+            "code" : "PE",
+            "name" : "Pernambuco"
+        },
+        {
+            "id" : 20,
+            "code" : "RS",
+            "name" : "Rio Grande do Sul "
+        },
+        {
+            "id" : 24,
+            "code" : "SP",
+            "name" : "São Paulo"
+        },
+        {
+            "id" : 1,
+            "code" : "AC",
+            "name" : "Acre"
+        },
+        {
+            "id" : 2,
+            "code" : "AL",
+            "name" : "Alagoas"
+        },
+        {
+            "id" : 9,
+            "code" : "MA",
+            "name" : "Maranhão"
+        },
+        {
+            "id" : 6,
+            "code" : "DF",
+            "name" : "Distrito Federal"
+        },
+        {
+            "id" : 7,
+            "code" : "ES",
+            "name" : "Espírito Santo"
+        },
+        {
+            "id" : 13,
+            "code" : "PA",
+            "name" : "Pará"
+        },
+        {
+            "id" : 14,
+            "code" : "PB",
+            "name" : "Paraíba"
+        },
+        {
+            "id" : 17,
+            "code" : "PI",
+            "name" : "Piauí"
+        },
+        {
+            "id" : 18,
+            "code" : "RJ",
+            "name" : "Río de Janeiro"
+        },
+        {
+            "id" : 19,
+            "code" : "RN",
+            "name" : "Rio Grande do Norte"
+        },
+        {
+            "id" : 21,
+            "code" : "RO",
+            "name" : "Rondônia"
+        },
+        {
+            "id" : 22,
+            "code" : "RR",
+            "name" : "Roraima"
+        },
+        {
+            "id" : 23,
+            "code" : "SC",
+            "name" : "Santa Catarina"
+        },
+        {
+            "id" : 25,
+            "code" : "SE",
+            "name" : "Sergipe"
+        },
+        {
+            "id" : 26,
+            "code" : "TO",
+            "name" : "Tocantins"
+        },
+        {
+            "id" : 27,
+            "code" : "AP",
+            "name" : "Amapá"
+        }
+    ]
+}
+    

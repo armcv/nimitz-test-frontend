@@ -1,0 +1,26 @@
+<div class="content-section introduction">
+    <div class="feature-intro">
+        <h1>Scrapper Tasks</h1>
+        <p>History of Scrapper Task</p>
+    </div>
+</div>
+<div class="content-section implementation">
+    <p-table [value]="scrapperTasks" responsiveLayout="scroll">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Id</th>
+                <th>Date</th>
+                <th>Task Status</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-scrapperTask>
+            <tr>
+                <td>{{scrapperTask.id}}</td>
+                <td>{{scrapperTask.readDate}}</td>
+                <td>{{scrapperTask.isSuccess}}</td>
+            </tr>
+        </ng-template>
+    </p-table> 
+
+</div>
+
