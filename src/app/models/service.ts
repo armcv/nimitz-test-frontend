@@ -3,5 +3,5 @@ export interface Service {
     verificationDate?:string;
     verificationTime?:string;
     authorizer?:string;
-    service_status?: number;
+    status?: string;
 }

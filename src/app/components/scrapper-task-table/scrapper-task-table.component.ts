@@ -3,11 +3,11 @@ import { ScrapperTasks } from 'src/app/models/scrapper.tasks';
 import { ScrapperService } from '../../services/scrapper.service';
 
 @Component({
-  selector: 'app-history',
-  templateUrl: './history.component.html',
-  styleUrls: ['./history.component.sass'],
+  selector: 'app-scrapper-task-table',
+  templateUrl: './scrapper-task-table.component.html',
+  styleUrls: ['./scrapper-task-table.component.sass'],
 })
-export class HistoryComponent implements OnInit {
+export class ScrapperTaskTableComponent implements OnInit {
   scrapperTasks: ScrapperTasks[] = [];
   first = 0;
   rows = 10;

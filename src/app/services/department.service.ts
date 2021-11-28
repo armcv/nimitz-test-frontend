@@ -5,14 +5,14 @@ import { Department } from '../models/department';
 
 @Injectable()
 export class DepartmentService {
+    baseUrl: string;
 
-    constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient) { 
+        this.baseUrl = 'http://localhost:8080/api/departments';
+    }
 
     getDepartments() {
-        return this.http.get<any>('http://localhost:8080/api/departments')
-        .toPromise()
-        .then(res => <Department[]>res)
-        .then(data => { return data; });
+        return this.http.get<Department[]>(this.baseUrl);
     }
 
 }

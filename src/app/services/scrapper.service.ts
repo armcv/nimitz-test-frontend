@@ -3,16 +3,26 @@ import { Injectable } from '@angular/core';
 import { ScrapperTasks } from '../models/scrapper.tasks';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ScrapperService {
-
-  constructor(private http: HttpClient) { }
+  endpoint: string;
+  
+  constructor(private http: HttpClient) {
+    this.endpoint = "http://localhost:8080/api/scrapper";
+  }
 
   getScrapperTasks() {
-      return this.http.get<any>('http://localhost:8080/api/scrapper')
+    return this.http.get<ScrapperTasks[]>(this.endpoint);
+  }
+
+  getTotalTasks() {
+    return this.http
+      .get<any>(`http://localhost:8080/api/scrapper/count`)
       .toPromise()
-      .then(res => <ScrapperTasks[]>res)
-      .then(data => { return data; });
+      .then((res) => <number>res)
+      .then((data) => {
+        return data;
+      });
   }
 }

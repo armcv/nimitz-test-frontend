@@ -4,26 +4,29 @@
         <p>Services Status Directory</p>
     </div>
 </div>
-
-
-<p-dataView #dv [value]="services" [paginator]="true" [rows]="15" filterBy="name" (onPage)="onPage($event)" layout="list">
+<p-dataView #dv [value]="services" [paginator]="true" [rows]="15" filterBy="name" (onPage)="onPage($event)"
+    layout="list">
     <ng-template pTemplate="header">
-        <div>
-            <p-dropdown [options]="departments" optionLabel="name" optionValue="code" placeholder="Filter by Departments" (onChange)="onChange($event)"></p-dropdown>
-            <span>
-                <p-calendar [showIcon]="true" inputId="icon"></p-calendar>
-            </span>
+        <div class="grid">
+            <div class="col-2">
+                <p-dropdown [options]="departments" optionLabel="name" optionValue="code"
+                    placeholder="Filter by Departments" (onChange)="onChange($event)"></p-dropdown>
+            </div>
+            <div class="col-2">
+                <p-calendar [showIcon]="true" (onSelect)="onSelectDate($event)" inputId="icon"></p-calendar>
+            </div>
         </div>
     </ng-template>
     <ng-template let-service pTemplate="listItem">
-        <div class="p-col-12">
+        <div class="col-12">
             <div class="product-list-item">
                 <div class="product-list-detail">
                     <div class="product-name">{{service.authorizer}}</div>
                     <div class="product-description">{{service.verificationDate}}</div>
                 </div>
                 <div class="product-list-action">
-                    <span [class]="'product-badge status-' + service.status.toLowerCase()">{{service.status}}</span>
+                    <span
+                        [class]="'product-badge status-' + service.status.toLowerCase()">{{service.verificationTime}}</span>
                 </div>
             </div>
         </div>

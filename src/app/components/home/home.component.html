@@ -1,1 +1,22 @@
-<p>home works!</p>
+<div>
+    <div>
+        <h1>Dashboard</h1>
+    </div>
+</div>
+<div class='grid'>
+    <div class='col-6'>
+        <p-card header="Departments" [style]="{'width': '100%', 'margin-bottom': '2em'}">
+            <app-department-table></app-department-table>
+        </p-card>
+    </div>
+    <div class='col-6'>
+        <p-card header="Scrapper Tasks" [style]="{'width': '100%', 'margin-bottom': '2em'}">
+            <app-scrapper-task-table></app-scrapper-task-table>
+        </p-card>
+    </div>
+    <div class='col-12'>
+        <p-card header="Services Status" [style]="{'width': '100%', 'margin-bottom': '2em'}">
+            <app-bar-chart></app-bar-chart>
+        </p-card>
+    </div>
+</div>

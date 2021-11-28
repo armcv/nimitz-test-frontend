@@ -12,6 +12,9 @@ import { DropdownModule } from 'primeng/dropdown';
 import { CalendarModule } from 'primeng/calendar';
 import { ToolbarModule } from 'primeng/toolbar';
 import { DividerModule } from 'primeng/divider';
+import { ScrollPanelModule } from 'primeng/scrollpanel';
+import { CardModule } from 'primeng/card';
+import { ChartModule } from 'primeng/chart';
 
 import { DepartmentComponent } from './components/department/department.component';
 import { HomeComponent } from './components/home/home.component';
@@ -20,7 +23,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { DepartmentService } from './services/department.service';
 import { HistoryComponent } from './components/history/history.component';
 import { ScrapperComponent } from './components/scrapper/scrapper.component';
-import { ServiceComponent } from './components/service/service.component'
+import { ServiceComponent } from './components/service/service.component';
+import { BarChartComponent } from './components/bar-chart/bar-chart.component';
+import { DepartmentTableComponent } from './components/department-table/department-table.component';
+import { ScrapperTaskTableComponent } from './components/scrapper-task-table/scrapper-task-table.component'
 
 @NgModule({
   declarations: [
@@ -30,7 +36,10 @@ import { ServiceComponent } from './components/service/service.component'
     HeaderComponent,
     HistoryComponent,
     ScrapperComponent,
-    ServiceComponent
+    ServiceComponent,
+    BarChartComponent,
+    DepartmentTableComponent,
+    ScrapperTaskTableComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +52,10 @@ import { ServiceComponent } from './components/service/service.component'
     DropdownModule,
     CalendarModule,
     ToolbarModule,
-    DividerModule
+    DividerModule,
+    ScrollPanelModule,
+    CardModule,
+    ChartModule
   ],
   providers: [DepartmentService],
   bootstrap: [AppComponent]

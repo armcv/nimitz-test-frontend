@@ -4,6 +4,7 @@ import { ServiceService } from 'src/app/services/service.service';
 import { SelectItem } from 'primeng/api';
 import { Department } from '../../models/department';
 import { Service } from '../../models/service';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-service',
@@ -12,19 +13,25 @@ import { Service } from '../../models/service';
 })
 export class ServiceComponent implements OnInit {
 
-  departments: Department [] = [];
-  services: Service [] = [];
+  departments: Department[] = [];
+  services: Service[] = [] ;
 
-  constructor(private departmentService: DepartmentService, private serviceService: ServiceService) { }
+  constructor(private departmentService: DepartmentService, private serviceService: ServiceService) {}
 
-  ngOnInit(): void {
-    this.departmentService.getDepartments().then(data => this.departments = data);
-    this.serviceService.getServices().then(data => this.services = data);
+  async ngOnInit(): Promise<void> {
+    this.departmentService.getDepartments().subscribe(response => this.departments = response);
+    this.serviceService.getServices().subscribe(response => this.services = response);
   }
 
-  onChange(event: { value: any; }) {
+  onChange(event: { value: string; }) {
     const value = event.value;
-    this.serviceService.getServicesByDepartment(value).then(data => this.services = data);
+    this.serviceService.getServicesByDepartment(value).subscribe(response => this.services = response);
+    console.log(value);
+  }
+
+  onSelectDate(event: any){
+    const value = event;
+    //this.serviceService.getServicesByDepartment(value).then(data => this.services = data);
     console.log(value);
   }
 
