@@ -6,26 +6,20 @@ import { Service } from '../models/service';
   providedIn: 'root',
 })
 export class ServiceService {
-  baseUrl: string;
+  endpoint: string;
   constructor(private http: HttpClient) {
-    this.baseUrl = 'http://localhost:8080/api/services/directory'
+    this.endpoint = 'http://localhost:8080/api/services/directory';
   }
 
   getServices() {
-    return this.http.get<Service[]>(this.baseUrl);
+    return this.http.get<Service[]>(this.endpoint);
   }
 
   getServicesByDepartment(code: string) {
-    return this.http.get<Service[]>(this.baseUrl, { params: {code } });
+    return this.http.get<Service[]>(this.endpoint, { params: { code } });
   }
 
   getServicesByDate(date: string) {
-    return this.http
-      .get<any>(`${this.baseUrl}?verificationDate=${date}`)
-      .toPromise()
-      .then((res) => <Service[]>res)
-      .then((data) => {
-        return data;
-      });
+    return this.http.get<Service[]>(this.endpoint, { params: { date } });
   }
 }

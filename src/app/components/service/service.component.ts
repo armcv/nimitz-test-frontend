@@ -25,14 +25,13 @@ export class ServiceComponent implements OnInit {
 
   onChange(event: { value: string; }) {
     const value = event.value;
-    this.serviceService.getServicesByDepartment(value).subscribe(response => this.services = response);
     console.log(value);
+    this.serviceService.getServicesByDepartment(value).subscribe(response => this.services = response);
   }
 
-  onSelectDate(event: any){
-    const value = event;
-    //this.serviceService.getServicesByDepartment(value).then(data => this.services = data);
-    console.log(value);
+  onSelectDate(event: Date){
+    const date = event.toLocaleString("fr-CA", { year: "numeric", month: "2-digit",   day: "2-digit" });
+    this.serviceService.getServicesByDate(date).subscribe(response => this.services = response);
   }
 
   onPage(event: { value: any; }) {

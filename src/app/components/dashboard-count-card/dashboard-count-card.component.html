@@ -1,0 +1,9 @@
+<p-card styleClass="{{status}}">
+    <h4 class="text-center">Services on {{status}}</h4>
+    <h2  class="text-center">{{selectedDepartment}}</h2>
+    <h1  class="text-center">{{selectedCount}}</h1>
+    <ng-template pTemplate="footer">
+        <p-paginator styleClass="green" [rows]="rows" [first]="first" [totalRecords]="totalRecords" [showPageLinks]="false"
+            (onPageChange)="paginate($event)"></p-paginator>
+    </ng-template>
+</p-card>

@@ -14,6 +14,7 @@ import { ToolbarModule } from 'primeng/toolbar';
 import { DividerModule } from 'primeng/divider';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
 import { CardModule } from 'primeng/card';
+import { PaginatorModule } from 'primeng/paginator';
 import { ChartModule } from 'primeng/chart';
 
 import { DepartmentComponent } from './components/department/department.component';
@@ -26,7 +27,8 @@ import { ScrapperComponent } from './components/scrapper/scrapper.component';
 import { ServiceComponent } from './components/service/service.component';
 import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 import { DepartmentTableComponent } from './components/department-table/department-table.component';
-import { ScrapperTaskTableComponent } from './components/scrapper-task-table/scrapper-task-table.component'
+import { ScrapperTaskTableComponent } from './components/scrapper-task-table/scrapper-task-table.component';
+import { DashboardCountCardComponent } from './components/dashboard-count-card/dashboard-count-card.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { ScrapperTaskTableComponent } from './components/scrapper-task-table/scr
     ServiceComponent,
     BarChartComponent,
     DepartmentTableComponent,
-    ScrapperTaskTableComponent
+    ScrapperTaskTableComponent,
+    DashboardCountCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,9 +58,10 @@ import { ScrapperTaskTableComponent } from './components/scrapper-task-table/scr
     DividerModule,
     ScrollPanelModule,
     CardModule,
-    ChartModule
+    ChartModule,
+    PaginatorModule
   ],
   providers: [DepartmentService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -4,6 +4,17 @@
     </div>
 </div>
 <div class='grid'>
+
+    <div class='col-4'>
+        <app-dashboard-count-card [status]="verde"></app-dashboard-count-card>
+    </div>
+    <div class='col-4'>
+        <app-dashboard-count-card [status]="amarelo"></app-dashboard-count-card>
+    </div>
+    <div class='col-4'>
+        <app-dashboard-count-card [status]="vermelho"></app-dashboard-count-card>
+    </div>
+
     <div class='col-6'>
         <p-card header="Departments" [style]="{'width': '100%', 'margin-bottom': '2em'}">
             <app-department-table></app-department-table>
