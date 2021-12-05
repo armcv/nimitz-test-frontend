@@ -4,31 +4,4 @@
         <p>Services Status Directory</p>
     </div>
 </div>
-<p-dataView #dv [value]="services" [paginator]="true" [rows]="15" filterBy="name" (onPage)="onPage($event)"
-    layout="list">
-    <ng-template pTemplate="header">
-        <div class="grid">
-            <div class="col-2">
-                <p-dropdown [options]="departments" optionLabel="name" optionValue="code"
-                    placeholder="Filter by Departments" (onChange)="onChange($event)"></p-dropdown>
-            </div>
-            <div class="col-2">
-                <p-calendar [showIcon]="true" dateFormat="yy-mm-dd" dataType="string" (onSelect)="onSelectDate($event)" inputId="icon"></p-calendar>
-            </div>
-        </div>
-    </ng-template>
-    <ng-template let-service pTemplate="listItem">
-        <div class="col-12">
-            <div class="product-list-item">
-                <div class="product-list-detail">
-                    <div class="product-name">{{service.authorizer.authorizer}}</div>
-                    <div class="product-description">{{service.date}}</div>
-                </div>
-                <div class="product-list-action">
-                    <span
-                        [class]="'product-badge status-' + service.serviceStatus.status.toLowerCase()">{{service.serviceStatus.status}}</span>
-                </div>
-            </div>
-        </div>
-    </ng-template>
-</p-dataView>
+<app-services-table></app-services-table>

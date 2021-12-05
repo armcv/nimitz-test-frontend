@@ -29,6 +29,7 @@ import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 import { DepartmentTableComponent } from './components/department-table/department-table.component';
 import { ScrapperTaskTableComponent } from './components/scrapper-task-table/scrapper-task-table.component';
 import { DashboardCountCardComponent } from './components/dashboard-count-card/dashboard-count-card.component';
+import { ServicesTableComponent } from './components/services-table/services-table.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { DashboardCountCardComponent } from './components/dashboard-count-card/d
     DepartmentTableComponent,
     ScrapperTaskTableComponent,
     DashboardCountCardComponent,
+    ServicesTableComponent,
   ],
   imports: [
     BrowserModule,

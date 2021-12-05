@@ -1,8 +1,8 @@
 version: '3.1'
 
 services:
-    app:
-        image: 'my-angular-app'
-        build: '.'
-        ports:
-          - 3000:80
+  app:
+    image: 'nimitz-frontend-test'
+    build: '.'
+    ports:
+      - 3000:80
