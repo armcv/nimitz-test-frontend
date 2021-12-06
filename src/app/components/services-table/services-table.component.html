@@ -13,14 +13,14 @@
     </ng-template>
     <ng-template let-service pTemplate="listItem">
         <div class="col-12">
-            <div class="product-list-item">
-                <div class="product-list-detail">
-                    <div class="product-name">{{service.authorizer.authorizer}}</div>
-                    <div class="product-description">{{service.date}}</div>
+            <div class="service-list-item">
+                <div class="service-list-detail">
+                    <div class="service-name">{{service.authorizer.authorizer}}</div>
+                    <div class="service-description">{{service.date}}</div>
                 </div>
-                <div class="product-list-action">
+                <div class="service-list-action">
                     <span
-                        [class]="'product-badge status-' + service.serviceStatus.status.toLowerCase()">{{service.serviceStatus.status}}</span>
+                        [class]="'service-badge status-' + service.serviceStatus.status.toLowerCase()">{{service.serviceStatus.status}}</span>
                 </div>
             </div>
         </div>
