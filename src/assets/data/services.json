@@ -1,0 +1,33 @@
+{
+    "data": [
+        {
+            "id" : 1,
+            "verification_date" : "2021-11-13T15:41:10.851Z",
+            "authorizer" : "AP",
+            "service_status": 1,
+            "inventoryStatus": "Amarelo"
+        },
+        {
+            "id" : 2,
+            "verification_date" : "2021-11-13T15:41:10.851Z",
+            "authorizer" : "AM",
+            "service_status": 1,
+            "inventoryStatus": "Verde"
+        },
+        {
+            "id" : 3,
+            "verification_date" : "2021-11-13T15:41:10.851Z",
+            "authorizer" : "AM",
+            "service_status": 1,
+            "inventoryStatus": "Vermelho"
+        },
+        {
+            "id" : 4,
+            "verification_date" : "2021-11-13T15:41:10.851Z",
+            "authorizer" : "AM",
+            "service_status": 1,
+            "inventoryStatus": "Vermelho"
+        }
+    ]
+}
+    

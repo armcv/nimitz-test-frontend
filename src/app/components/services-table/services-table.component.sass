@@ -1,0 +1,67 @@
+:host ::ng-deep
+    .p-dropdown
+        width: 14rem
+        font-weight: normal
+
+    .service-name
+        font-size: 1.5rem
+        font-weight: 700
+
+    .service-description
+        margin: 0 0 .5rem 0
+
+    .service-list-item
+        display: flex
+        align-items: center
+        padding: 0.5rem
+        width: 100%
+
+        .service-list-detail
+            flex: 1 1 0
+
+        .service-list-action
+            display: flex
+            flex-direction: column
+
+    .service-badge 
+        border-radius: 2px
+        padding: .25em .5rem
+        text-transform: uppercase
+        font-weight: 700
+        font-size: 12px
+        letter-spacing: .3px
+
+        &.status-verde
+            background: #C8E6C9
+            color: #256029
+    
+        &.status-vermelho 
+            background: #FFCDD2
+            color: #C63737
+        
+        &.status-amarelo 
+            background: #FEEDAF
+            color: #8A5340
+
+@media screen and (max-width: 576px)
+    :host ::ng-deep .service-list-item
+        flex-direction: column
+        align-items: center
+
+        img
+            width: 75%
+            margin: 2rem 0
+
+        .service-list-detail
+            text-align: center
+
+        .service-list-action
+            display: flex
+            flex-direction: column
+
+        .service-list-action
+            margin-top: 2rem
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            width: 100%

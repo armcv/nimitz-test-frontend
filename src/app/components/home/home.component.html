@@ -1,0 +1,33 @@
+<div>
+    <div>
+        <h1>Dashboard</h1>
+    </div>
+</div>
+<div class='grid'>
+
+    <div class='col-4'>
+        <app-dashboard-count-card [status]="verde"></app-dashboard-count-card>
+    </div>
+    <div class='col-4'>
+        <app-dashboard-count-card [status]="amarelo"></app-dashboard-count-card>
+    </div>
+    <div class='col-4'>
+        <app-dashboard-count-card [status]="vermelho"></app-dashboard-count-card>
+    </div>
+
+    <div class='col-6'>
+        <p-card header="Departments" [style]="{'width': '100%', 'margin-bottom': '2em'}">
+            <app-department-table></app-department-table>
+        </p-card>
+    </div>
+    <div class='col-6'>
+        <p-card header="Scrapper Tasks" [style]="{'width': '100%', 'margin-bottom': '2em'}">
+            <app-scrapper-task-table></app-scrapper-task-table>
+        </p-card>
+    </div>
+    <div class='col-12'>
+        <p-card header="Services Status" [style]="{'width': '100%', 'margin-bottom': '2em'}">
+            <app-services-table></app-services-table>
+        </p-card>
+    </div>
+</div>
